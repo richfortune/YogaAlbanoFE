@@ -111,7 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 formFeedback.classList.add('hidden');
             }, 6000);
-
         }, 1500);
     });
 

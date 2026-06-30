@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="YogaAlbano - Uno spazio ad Albano Laziale per ritrovare equilibrio, energia e benessere attraverso la pratica dello yoga e della meditazione.">
+    <title>YogaAlbano | Spazio per l'Equilibrio e il Benessere</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navigazione -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#" class="logo">Yoga<span>Albano</span></a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#chi-siamo">Chi Siamo</a></li>
+                    <li><a href="#corsi">Corsi & Orari</a></li>
+                    <li><a href="#insegnanti">Insegnanti</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                </ul>
+            </nav>
+            
+            <button class="hamburger" id="hamburgerBtn" aria-label="Apri menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Sezione Hero -->
+    <section class="hero" id="home">
+        <div class="hero-inner fade-in">
+            <div class="hero-text">
+                <span class="hero-eyebrow">Scuola di Yoga ad Albano Laziale</span>
+                <h1 class="hero-title">YogaAlbano</h1>
+                <p class="hero-subtitle">Ritrova equilibrio, energia e benessere attraverso il respiro e il movimento.</p>
+                <p class="hero-description">Uno spazio accogliente dove praticare yoga, ascoltare il corpo e creare una pausa consapevole nella tua giornata.</p>
+                <div class="hero-actions">
+                    <a href="#corsi" class="btn btn-primary">Scopri i corsi</a>
+                    <a href="#contatti" class="btn btn-secondary">Contattaci</a>
+                </div>
+                <span class="hero-note">Lezioni per principianti e praticanti di ogni livello</span>
+            </div>
+            <div class="hero-image-wrapper">
+                <img src="images/gabry.png" alt="Pratica yoga rilassante e consapevole" class="hero-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Chi Siamo (Filosofia) -->
+    <section class="section chi-siamo" id="chi-siamo">
+        <div class="container">
+            <div class="grid-2-col align-center">
+                <div class="chi-siamo-content reveal-left">
+                    <span class="section-tag">La Nostra Filosofia</span>
+                    <h2 class="section-title">Chi Siamo</h2>
+                    <p class="paragraph">
+                        YogaAlbano nasce come spazio dedicato alla pratica dello yoga, al benessere della persona e alla ricerca di equilibrio tra corpo, mente e respiro. Le nostre lezioni sono pensate per accompagnare ogni praticante in un percorso graduale, accogliente e consapevole.
+                    </p>
+                    <p class="paragraph">
+                        Crediamo che lo yoga sia per tutti, indipendentemente dall'età o dalla preparazione fisica. Il nostro intento è offrire un'oasi di pace quotidiana in cui staccare dal caos esterno, ritrovare la propria armonia interiore e coltivare uno stile di vita sano e sereno.
+                    </p>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <span class="feature-icon">✦</span>
+                            <span>Ambiente accogliente e rilassante</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✦</span>
+                            <span>Insegnanti certificati e qualificati</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✦</span>
+                            <span>Classi per tutti i livelli di esperienza</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chi-siamo-image reveal-right">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80" alt="Pratica dello Yoga in un ambiente sereno" class="main-img">
+                        <div class="decorative-box"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Corsi e Orari -->
+    <section class="section corsi" id="corsi">
+        <div class="container">
+            <div class="section-header text-center reveal-up">
+                <span class="section-tag">Il Nostro Calendario</span>
+                <h2 class="section-title">Corsi e Orari</h2>
+                <p class="section-subtitle">Trova la pratica adatta alle tue esigenze e al tuo ritmo</p>
+            </div>
+
+            <!-- Corsi Cards -->
+            <div class="courses-grid reveal-up">
+                <!-- Hatha Yoga -->
+                <div class="course-card">
+                    <div class="course-header">
+                        <span class="course-tag">Equilibrio</span>
+                        <h3>Hatha Yoga</h3>
+                    </div>
+                    <p class="course-desc">Una pratica classica focalizzata sul mantenimento delle posizioni (asana) e sul controllo del respiro (pranayama), per sviluppare forza e flessibilità.</p>
+                </div>
+                
+                <!-- Vinyasa Yoga -->
+                <div class="course-card">
+                    <div class="course-header">
+                        <span class="course-tag">Dinamismo</span>
+                        <h3>Vinyasa Yoga</h3>
+                    </div>
+                    <p class="course-desc">Uno stile dinamico e fluido in cui i movimenti sono sincronizzati con il respiro, creando una sequenza continua che energizza corpo e mente.</p>
+                </div>
+
+                <!-- Yoga Dolce -->
+                <div class="course-card">
+                    <div class="course-header">
+                        <span class="course-tag">Rilassamento</span>
+                        <h3>Yoga Dolce</h3>
+                    </div>
+                    <p class="course-desc">Un approccio morbido, lento e rilassante, ideale per chi desidera allungare il corpo delicatamente, sciogliere le tensioni e rigenerarsi.</p>
+                </div>
+
+                <!-- Power Yoga -->
+                <div class="course-card">
+                    <div class="course-header">
+                        <span class="course-tag">Energia</span>
+                        <h3>Power Yoga</h3>
+                    </div>
+                    <p class="course-desc">Una variante intensa e vigorosa dello yoga che unisce la forza muscolare, la resistenza cardiovascolare e la concentrazione mentale.</p>
+                </div>
+
+                <!-- Meditazione e Respiro -->
+                <div class="course-card">
+                    <div class="course-header">
+                        <span class="course-tag">Mente</span>
+                        <h3>Meditazione & Respiro</h3>
+                    </div>
+                    <p class="course-desc">Sessioni dedicate all'ascolto interiore, alle tecniche di respirazione (pranayama) e alla presenza mentale, per calmare i pensieri e alleviare lo stress.</p>
+                </div>
+            </div>
+
+            <!-- Orari Responsive Table -->
+            <div class="timetable-wrapper reveal-up">
+                <h3 class="timetable-title">Orario Settimanale delle Lezioni</h3>
+                <div class="responsive-table-container">
+                    <table class="timetable">
+                        <thead>
+                            <tr>
+                                <th>Giorno</th>
+                                <th>Orario</th>
+                                <th>Corso</th>
+                                <th>Focus</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Giorno">Lunedì</td>
+                                <td data-label="Orario">18:30 - 19:30</td>
+                                <td data-label="Corso" class="font-semibold text-sage">Hatha Yoga</td>
+                                <td data-label="Focus">Forza e Allineamento</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Giorno">Martedì</td>
+                                <td data-label="Orario">19:00 - 20:00</td>
+                                <td data-label="Corso" class="font-semibold text-sage">Vinyasa Yoga</td>
+                                <td data-label="Focus">Flusso e Respiro</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Giorno">Mercoledì</td>
+                                <td data-label="Orario">18:00 - 19:00</td>
+                                <td data-label="Corso" class="font-semibold text-sage">Yoga Dolce</td>
+                                <td data-label="Focus">Rilassamento e Mobilità</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Giorno">Giovedì</td>
+                                <td data-label="Orario">19:30 - 20:30</td>
+                                <td data-label="Corso" class="font-semibold text-sage">Power Yoga</td>
+                                <td data-label="Focus">Forza e Resistenza</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Giorno">Sabato</td>
+                                <td data-label="Orario">10:00 - 11:00</td>
+                                <td data-label="Corso" class="font-semibold text-sage">Meditazione e Respiro</td>
+                                <td data-label="Focus">Pace Mentale e Focus</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Insegnanti -->
+    <section class="section insegnanti bg-warm-light" id="insegnanti">
+        <div class="container">
+            <div class="section-header text-center reveal-up">
+                <span class="section-tag">La Nostra Guida</span>
+                <h2 class="section-title">I Nostri Insegnanti</h2>
+                <p class="section-subtitle">Professionisti certificati pronti ad accompagnarti nel tuo percorso di crescita</p>
+            </div>
+
+            <div class="teachers-grid reveal-up">
+                <!-- Laura Bianchi -->
+                <div class="teacher-card">
+                    <div class="teacher-image">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&h=600&q=80" alt="Laura Bianchi - Insegnante di Hatha Yoga">
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Laura Bianchi</h3>
+                        <span class="teacher-role">Insegnante di Hatha Yoga</span>
+                        <p class="teacher-desc">Insegna Hatha Yoga da oltre 10 anni con un approccio incentrato sulla precisione posturale e sulla connessione profonda tra respiro ed allineamento.</p>
+                    </div>
+                </div>
+
+                <!-- Marco Conti -->
+                <div class="teacher-card">
+                    <div class="teacher-image">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&h=600&q=80" alt="Marco Conti - Insegnante di Vinyasa e Power Yoga">
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Marco Conti</h3>
+                        <span class="teacher-role">Insegnante di Vinyasa & Power Yoga</span>
+                        <p class="teacher-desc">Dinamico e solare, Marco unisce il rigore fisico delle pratiche intense alla ricerca di uno stato meditativo in movimento.</p>
+                    </div>
+                </div>
+
+                <!-- Elena Rossi -->
+                <div class="teacher-card">
+                    <div class="teacher-image">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&h=600&q=80" alt="Elena Rossi - Insegnante di Yoga Dolce e Meditazione">
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Elena Rossi</h3>
+                        <span class="teacher-role">Insegnante di Yoga Dolce & Meditazione</span>
+                        <p class="teacher-desc">Specializzata in stili terapeutici e rilassanti, Elena guida ogni praticante verso la calma interiore e l'ascolto attento delle sensazioni.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Contatti -->
+    <section class="section contatti" id="contatti">
+        <div class="container">
+            <div class="section-header text-center reveal-up">
+                <span class="section-tag">Parla con Noi</span>
+                <h2 class="section-title">Contatti</h2>
+                <p class="section-subtitle">Siamo qui per rispondere a qualsiasi domanda e aiutarti a iniziare il tuo percorso</p>
+            </div>
+
+            <div class="grid-2-col reveal-up">
+                <!-- Info Contatti e WhatsApp -->
+                <div class="contact-info">
+                    <h3 class="contact-subtitle">Informazioni Utili</h3>
+                    <p class="paragraph">Puoi trovarci in sede, scriverci un'email o chiamarci. Se preferisci una risposta rapida, contattaci direttamente su WhatsApp.</p>
+                    
+                    <div class="contact-details">
+                        <!-- Indirizzo -->
+                        <div class="contact-detail-item">
+                            <div class="contact-detail-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            </div>
+                            <div class="contact-detail-text">
+                                <span>Indirizzo</span>
+                                <p>Albano Laziale, Roma</p>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="contact-detail-item">
+                            <div class="contact-detail-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </div>
+                            <div class="contact-detail-text">
+                                <span>Email</span>
+                                <p><a href="mailto:info@yogaalbano.it">info@yogaalbano.it</a></p>
+                            </div>
+                        </div>
+
+                        <!-- Telefono -->
+                        <div class="contact-detail-item">
+                            <div class="contact-detail-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            </div>
+                            <div class="contact-detail-text">
+                                <span>Telefono</span>
+                                <p><a href="tel:+390000000000">+39 000 000 0000</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+                </div>
+
+                <!-- Form Contatti -->
+                <div class="contact-form-wrapper">
+                    <h3 class="contact-subtitle">Invia un messaggio</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome completo</label>
+                            <input type="text" id="name" name="name" placeholder="Il tuo nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Indirizzo Email</label>
+                            <input type="email" id="email" name="email" placeholder="esempio@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Il tuo messaggio</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Come possiamo aiutarti?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Invia richiesta</span>
+                            <span class="btn-spinner hidden"></span>
+                        </button>
+                        <div class="form-feedback hidden" id="formFeedback"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Info Brand -->
+                <div class="footer-brand">
+                    <a href="#" class="logo footer-logo">Yoga<span>Albano</span></a>
+                    <p class="footer-desc">Uno spazio accogliente e professionale dedicato alla pratica dello yoga e alla ricerca del benessere quotidiano.</p>
+                </div>
+
+                <!-- Link Rapidi -->
+                <div class="footer-links">
+                    <h4>Link Rapidi</h4>
+                    <ul>
+                        <li><a href="#chi-siamo">Chi Siamo</a></li>
+                        <li><a href="#corsi">Corsi & Orari</a></li>
+                        <li><a href="#insegnanti">Insegnanti</a></li>
+                        <li><a href="#contatti">Contatti</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social & Copyright -->
+                <div class="footer-socials">
+                    <h4>Seguici</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0H8zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.302a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/></svg>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.104 1.981l-.062.294a2.014 2.014 0 0 1-1.415 1.42c-1.123.3-5.288.33-6.11.335H8.05a77.216 77.216 0 0 1-6.112-.335a2.01 2.01 0 0 1-1.415-1.42c-.101-.38-.172-.882-.22-1.402l-.01-.104-.022-.26-.008-.104c-.065-.914-.073-1.77-.074-1.957v-.075c.001-.194.01-1.108.104-1.981l.062-.294a2.01 2.01 0 0 1 1.415-1.42c1.122-.3 5.287-.33 6.11-.335h.09zM6.5 5v6l4.72-3L6.5 5z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom text-center">
+                <p>&copy; 2026 YogaAlbano. Tutti i diritti riservati. Sviluppato con dedizione e cura.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="app.js"></script>
+</body>
+</html>

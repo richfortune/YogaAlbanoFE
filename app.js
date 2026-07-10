@@ -68,50 +68,61 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // ==========================================================================
-    // 4. INTERAZIONE FORM DI CONTATTO (SIMULAZIONE BACKEND)
+    // 4. INVIO REALE FORM DI CONTATTO CON NETLIFY FORMS
     // ==========================================================================
     const contactForm = document.getElementById('contactForm');
     const formFeedback = document.getElementById('formFeedback');
-    const submitBtn = contactForm.querySelector('.btn-submit');
-    const btnSpinner = submitBtn.querySelector('.btn-spinner');
-    const btnText = submitBtn.querySelector('span');
 
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault(); // Previene il ricaricamento della pagina
+    if (contactForm && formFeedback) {
+        const submitBtn = contactForm.querySelector('.btn-submit');
+        const btnSpinner = submitBtn.querySelector('.btn-spinner');
+        const btnText = submitBtn.querySelector('span:first-child');
 
-        // Raccoglie i dati del form (per sviluppo futuro)
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            message: document.getElementById('message').value
-        };
+        contactForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
 
-        // Stati visivi durante l'invio
-        submitBtn.disabled = true;
-        btnSpinner.classList.remove('hidden');
-        btnText.textContent = 'Invio in corso...';
-        formFeedback.classList.add('hidden');
-        formFeedback.className = 'form-feedback'; // Reset classi feedback
+            submitBtn.disabled = true;
+            btnSpinner.classList.remove('hidden');
+            btnText.textContent = 'Invio in corso...';
 
-        // Simula una richiesta AJAX/API di 1.5 secondi
-        setTimeout(() => {
-            // Successo simulato
-            submitBtn.disabled = false;
-            btnSpinner.classList.add('hidden');
-            btnText.textContent = 'Invia richiesta';
+            formFeedback.className = 'form-feedback hidden';
+            formFeedback.textContent = '';
 
-            formFeedback.classList.remove('hidden');
-            formFeedback.classList.add('success');
-            formFeedback.textContent = `Grazie ${formData.name}! La tua richiesta è stata inviata con successo. Ti risponderemo presto.`;
+            try {
+                const formData = new FormData(contactForm);
 
-            // Pulisce il modulo
-            contactForm.reset();
+                const response = await fetch('/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: new URLSearchParams(formData).toString()
+                });
 
-            // Rimuove il feedback di successo dopo 5 secondi
-            setTimeout(() => {
-                formFeedback.classList.add('hidden');
-            }, 6000);
-        }, 1500);
-    });
+                if (!response.ok) {
+                    throw new Error(`Invio non riuscito: ${response.status}`);
+                }
+
+                const name = formData.get('name');
+
+                formFeedback.textContent =
+                    `Grazie ${name}! La tua richiesta è stata inviata correttamente. Ti risponeremo presto.`;
+
+                formFeedback.className = 'form-feedback success';
+                contactForm.reset();
+            } catch (error) {
+                console.error('Errore durante l’invio del modulo:', error);
+
+                formFeedback.textContent =
+                    'Non è stato possibile inviare il messaggio. Riprova tra qualche minuto.';
+
+                formFeedback.className = 'form-feedback error';
+            } finally {
+                submitBtn.disabled = false;
+                btnSpinner.classList.add('hidden');
+                btnText.textContent = 'Invia richiesta';
+            }
+        });
+    }
 
 });

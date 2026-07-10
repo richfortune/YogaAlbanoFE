@@ -563,7 +563,22 @@
                 <!-- Form Contatti -->
                 <div class="contact-form-wrapper">
                     <h3 class="contact-subtitle">Invia un messaggio</h3>
-                    <form class="contact-form" id="contactForm">
+                    <form
+                        class="contact-form"
+                        id="contactForm"
+                        name="contatti"
+                        method="POST"
+                        data-netlify="true"
+                        netlify-honeypot="bot-field"
+                    >
+                        <input type="hidden" name="form-name" value="contatti">
+
+                        <p class="hidden">
+                            <label>
+                                Non compilare questo campo:
+                                <input name="bot-field">
+                            </label>
+                        </p>
                         <div class="form-group">
                             <label for="name">Nome completo</label>
                             <input type="text" id="name" name="name" placeholder="Il tuo nome" required>
@@ -632,6 +647,6 @@
     </footer>
 
     <!-- Script -->
-    <script src="app.js"></script>
+    <script src="app.js?v=2"></script>
 </body>
 </html>

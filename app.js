@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const name = formData.get('name');
 
                 formFeedback.textContent =
-                    `Grazie ${name}! La tua richiesta è stata inviata correttamente. Ti risponeremo presto.`;
+                    `Grazie ${name}! La tua richiesta è stata inviata correttamente. Ti risponderemo presto.`;
 
                 formFeedback.className = 'form-feedback success';
                 contactForm.reset();

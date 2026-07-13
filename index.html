@@ -212,7 +212,13 @@
     <section class="section chi-siamo" id="chi-siamo">
         <div class="container">
             <div class="grid-2-col align-center">
-                <div class="chi-siamo-content reveal-left">
+                <div class="chi-siamo-image reveal-left">
+                    <div class="image-wrapper">
+                        <img src="images/scuola.jpg" alt="Lezione di Hatha Yoga ad Albano Laziale" class="main-img" loading="lazy" width="800" height="533">
+                        <div class="decorative-box"></div>
+                    </div>
+                </div>
+                <div class="chi-siamo-content reveal-right">
                     <span class="section-tag">La Nostra Filosofia</span>
                     <h2 class="section-title">Chi Siamo</h2>
                     <p class="paragraph">
@@ -234,12 +240,6 @@
                             <span class="feature-icon">✦</span>
                             <span>Classi per tutti i livelli di esperienza</span>
                         </div>
-                    </div>
-                </div>
-                <div class="chi-siamo-image reveal-right">
-                    <div class="image-wrapper">
-                        <img src="images/scuola.jpg" alt="Lezione di Hatha Yoga ad Albano Laziale" class="main-img" loading="lazy" width="800" height="533">
-                        <div class="decorative-box"></div>
                     </div>
                 </div>
             </div>
@@ -478,7 +478,7 @@
 
             <div class="teachers-grid reveal-up">
                 <!-- Laura Bianchi -->
-                <article class="teacher-card">
+                <article class="teacher-card" tabindex="0">
                     <div class="teacher-image">
                         <img src="images/Gabry3.jpeg" alt="Gabriella Markgraf - Insegnante di Hatha Yoga ad Albano" loading="lazy" width="600" height="600">
                     </div>
@@ -487,22 +487,33 @@
                         <span class="teacher-role">Insegnante di Hatha & Vinyasa Yoga</span>
                         <p class="teacher-desc">Fondatrice di YogaAlbano, Gabriella insegna yoga dal 2002 e ha maturato oltre 500 ore di formazione con autorevoli maestri internazionali. Integra yoga, meditazione, mindfulness in un percorso di consapevolezza che unisce pratiche antiche e strumenti moderni, accompagnando ogni persona verso un maggiore equilibrio tra corpo, mente ed emozioni.</p>
                     </div>
+                    <template class="teacher-full-desc">
+                        <p>Gabriella, insegnante di yoga, mindful bodywork, breathwork, meditazione, pilates, pilates Reformer e mindfulness, coach psicodinamico. 
+                            Pratica yoga da 23 anni. Ha studiato con alcuni dei miglior maestri di yoga internazionali tra cui Lucia Doyle, Fabio Andrico, Lino Miele, Dominic Corigliano, Manju Jois, Yoss Giancarlo Miggiano, Patrizia Rossi, e tanti altri.  Ha 500+ ore di teacher training e 15 anni di esperienza nel insegnare le sue discipline. All'università ha studiato psicologia, linguistica e storia dell'arte. 
+                        </p><p>    Il suo stile di yoga è un percorso di consapevolezza che unisce pratiche antiche e strumenti moderni e scientifici per accompagnarti alla scoperta di te stesso. Attraverso l’ascolto del corpo, l’osservazione dei processi mentali e l’esplorazione delle  potenzialità nascoste, uno impara a comprendere in profondità il funzionamento del suo essere. 
+                            Utilizza diverse tecniche di yoga, pilates, meditazione, mindfulness, stress release e coaching per guidarti in un viaggio interiore che integra corpo, mente ed emozioni, con l'obiettivo di ritrovare equilibrio, presenza e autenticità.
+                            Insegna lo yoga dal 2002.
+                        </p>
+                    </template>
                 </article>
 
                  <!-- Elena Rossi -->
-                <article class="teacher-card">
+                <article class="teacher-card" tabindex="0">
                     <div class="teacher-image">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&h=600&q=80" alt="Elena Rossi - Insegnante di Yoga Dolce e Meditazione ad Albano" loading="lazy" width="600" height="600">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&h=600&q=80" alt="Simona Pietrucci - Insegnante di Yoga Dolce e Meditazione ad Albano" loading="lazy" width="600" height="600">
                     </div>
                     <div class="teacher-info">
                         <h3>Simona Pietrucci</h3>
                         <span class="teacher-role">Insegnante di Yin Yoga & Hatha Flow</span>
                         <p class="teacher-desc">Con oltre quindici anni di pratica, Simona ha maturato un rapporto profondo e autentico con lo yoga. La formazione presso Yoga e Medicina® RYT 250 Plus le ha permesso di trasformare questa esperienza in un metodo di insegnamento attento, accogliente e orientato al benessere della persona.</p>
                     </div>
+                    <template class="teacher-full-desc">
+                        <p>BIOGRAFIA COMPLETA SIMONA</p>
+                    </template>
                 </article>
 
                 <!-- Marco Conti -->
-                <article class="teacher-card">
+                <article class="teacher-card" tabindex="0">
                     <div class="teacher-image">
                         <img src="images/chris.jpg" alt="Christian Agresta - Insegnante di Vinyasa e Power Yoga ad Albano" loading="lazy" width="600" height="600">
                     </div>
@@ -511,6 +522,9 @@
                         <span class="teacher-role">Insegnante di Vinyasa & Power Yoga</span>
                         <p class="teacher-desc">Si avvicina al mondo dello yoga nel 2016 e sotto la guida di Yoss Giancarlo Miggiano e Beatrice Giampaoli, consegue il diploma Yoga e Medicina® RYT 250 Plus, intraprendendo un percorso profondo di conoscenza, consapevolezza e trasformazione personale.</p>
                     </div>
+                    <template class="teacher-full-desc">
+                        <p>Si avvicina al mondo dello yoga nel 2016 e sotto la guida di Yoss Giancarlo Miggiano e Beatrice Giampaoli, consegue il diploma Yoga e Medicina® RYT 250 Plus, intraprendendo un percorso profondo di conoscenza, consapevolezza e trasformazione personale.</p>
+                    </template>
                 </article>
 
                
@@ -654,6 +668,24 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modale Insegnanti -->
+    <div id="teacherModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTeacherName" aria-hidden="true" tabindex="-1">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close" aria-label="Chiudi modale">&times;</button>
+            <div class="modal-content">
+                <div class="modal-image">
+                    <img id="modalTeacherImg" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <h3 id="modalTeacherName"></h3>
+                    <span id="modalTeacherRole" class="teacher-role"></span>
+                    <div id="modalTeacherDesc" class="teacher-desc"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Script -->
     <script src="app.js?v=2"></script>

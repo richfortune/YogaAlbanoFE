@@ -124,5 +124,104 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    // ==========================================================================
+    // 5. GESTIONE MODALE INSEGNANTI
+    // ==========================================================================
+    const teacherCards = document.querySelectorAll('.teacher-card');
+    const teacherModal = document.getElementById('teacherModal');
+    
+    if (teacherCards.length > 0 && teacherModal) {
+        const modalOverlay = teacherModal.querySelector('.modal-overlay');
+        const modalCloseBtn = teacherModal.querySelector('.modal-close');
+        const modalImg = document.getElementById('modalTeacherImg');
+        const modalName = document.getElementById('modalTeacherName');
+        const modalRole = document.getElementById('modalTeacherRole');
+        const modalDesc = document.getElementById('modalTeacherDesc');
+        
+        let lastActiveElement = null;
+
+        const openModal = (card) => {
+            lastActiveElement = card;
+
+            const img = card.querySelector('.teacher-image img');
+            const name = card.querySelector('.teacher-info h3').textContent;
+            const role = card.querySelector('.teacher-role').textContent;
+            
+            const fullDescTemplate = card.querySelector('.teacher-full-desc');
+            let descContent = '';
+            if (fullDescTemplate) {
+                descContent = fullDescTemplate.innerHTML;
+            } else {
+                const fallbackDesc = card.querySelector('.teacher-desc');
+                descContent = fallbackDesc ? `<p>${fallbackDesc.textContent}</p>` : '';
+            }
+
+            modalImg.src = img.src;
+            modalImg.alt = img.alt;
+            modalName.textContent = name;
+            modalRole.textContent = role;
+            modalDesc.innerHTML = descContent;
+
+            teacherModal.classList.add('active');
+            teacherModal.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('overflow-hidden');
+
+            setTimeout(() => {
+                modalCloseBtn.focus();
+            }, 50);
+        };
+
+        const closeModal = () => {
+            teacherModal.classList.remove('active');
+            teacherModal.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('overflow-hidden');
+
+            if (lastActiveElement) {
+                lastActiveElement.focus();
+            }
+        };
+
+        teacherCards.forEach(card => {
+            card.addEventListener('click', () => openModal(card));
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openModal(card);
+                }
+            });
+        });
+
+        modalCloseBtn.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', closeModal);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && teacherModal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+
+        // Focus trap
+        teacherModal.addEventListener('keydown', (e) => {
+            if (e.key === 'Tab') {
+                const focusableElements = teacherModal.querySelectorAll('button, [tabindex="0"]');
+                if (focusableElements.length > 0) {
+                    const firstElement = focusableElements[0];
+                    const lastElement = focusableElements[focusableElements.length - 1];
+
+                    if (e.shiftKey) {
+                        if (document.activeElement === firstElement) {
+                            lastElement.focus();
+                            e.preventDefault();
+                        }
+                    } else {
+                        if (document.activeElement === lastElement) {
+                            firstElement.focus();
+                            e.preventDefault();
+                        }
+                    }
+                }
+            }
+        });
+    }
 
 });

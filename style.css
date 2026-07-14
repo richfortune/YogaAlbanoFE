@@ -1478,6 +1478,19 @@ img {
 
 /* Responsiveness for tablet and mobile */
 @media (max-width: 768px) {
+    .modal {
+        position: fixed;
+        inset: 0;
+        height: 100vh;
+        height: 100dvh;
+    }
+
+    .modal-container {
+        max-height: calc(100vh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 2rem);
+        max-height: calc(100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 2rem);
+        overflow-y: auto;
+    }
+
     .modal-content {
         grid-template-columns: 1fr;
     }

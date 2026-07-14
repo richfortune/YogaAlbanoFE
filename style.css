@@ -742,64 +742,94 @@ img {
     gap: 3rem;
 }
 
-.teacher-card {
+.teachers-grid .teacher-card {
     background-color: var(--color-white);
     border-radius: var(--border-radius);
     overflow: hidden;
-    box-shadow: var(--shadow-soft);
-    border: 1px solid rgba(95, 125, 109, 0.04);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03); /* Ombra appena visibile */
+    border: 1px solid rgba(200, 130, 109, 0.2); /* Bordo terracotta molto leggero */
     transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    height: 100%;
 }
 
-.teacher-card:hover {
+.teachers-grid .teacher-card:hover {
     transform: translateY(-8px);
-    box-shadow: var(--shadow-medium);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
 }
 
-.teacher-image {
-    width: 100%;
-    height: 380px;
+.teachers-grid .teacher-card .teacher-image {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
     overflow: hidden;
-    position: relative;
+    margin: 0 auto 1.5rem auto;
+    flex-shrink: 0;
 }
 
-.teacher-image img {
+.teachers-grid .teacher-card .teacher-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: var(--transition-smooth);
 }
 
-.teacher-card:hover .teacher-image img {
+.teachers-grid .teacher-card:hover .teacher-image img {
     transform: scale(1.05);
 }
 
-.teacher-info {
-    padding: 2rem;
+.teachers-grid .teacher-card .teacher-info {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
 }
 
-.teacher-info h3 {
-    font-size: 1.8rem;
+.teachers-grid .teacher-card .teacher-info h3 {
+    font-size: 1.5rem;
     color: var(--color-sage-dark);
     margin-bottom: 0.25rem;
 }
 
-.teacher-role {
+.teachers-grid .teacher-card .teacher-role {
     display: block;
     font-size: 0.85rem;
     color: var(--color-terracotta);
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 500;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
 }
 
-.teacher-desc {
+.teachers-grid .teacher-card .teacher-desc {
     color: var(--color-text-light);
     font-size: 0.95rem;
     font-weight: 300;
     line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.teachers-grid .teacher-card .teacher-more {
+    margin-top: auto;
+    font-size: 0.85rem;
+    color: var(--color-sage);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    transition: var(--transition-smooth);
+}
+
+.teachers-grid .teacher-card:hover .teacher-more {
+    color: var(--color-terracotta);
 }
 /* ==========================================================================
    CONTATTI SECTION
@@ -1251,10 +1281,17 @@ img {
     .teachers-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
+        justify-items: center;
     }
 
-    .teacher-image {
-        height: 320px;
+    .teachers-grid .teacher-card {
+        max-width: 420px;
+        width: 100%;
+    }
+
+    .teachers-grid .teacher-card .teacher-image {
+        width: 115px;
+        height: 115px;
     }
 
     .contact-info {

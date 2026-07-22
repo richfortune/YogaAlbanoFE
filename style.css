@@ -194,7 +194,7 @@ img {
 }
 
 .btn-whatsapp {
-    background-color: #25D366;
+    background-color: #28a055;
     color: var(--color-white);
     font-weight: 600;
     gap: 0.5rem;
@@ -887,6 +887,67 @@ img {
     color: var(--color-terracotta);
 }
 
+.contatti .grid-2-col {
+    align-items: start;
+}
+
+/* ==========================================================================
+   COME RAGGIUNGERCI SECTION
+   ========================================================================== */
+.come-raggiungerci {
+    background-color: var(--color-beige-dark);
+}
+
+.reach-us-grid {
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.reach-us-map {
+    width: 100%;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+    line-height: 0;
+}
+
+.reach-us-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.reach-us-title {
+    font-size: 1.8rem;
+    color: var(--color-sage-dark);
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+}
+
+.reach-us-text {
+    font-size: 1.05rem;
+    color: var(--color-text-light);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.reach-btn {
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.reach-divider {
+    border: 0;
+    height: 1px;
+    background-color: rgba(95, 125, 109, 0.15);
+    margin: 2.5rem 0;
+}
+
 /* Contact Form */
 .contact-form-wrapper {
     background-color: var(--color-white);
@@ -1296,6 +1357,19 @@ img {
 
     .contact-info {
         padding-right: 0;
+    }
+
+    .reach-us-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .reach-us-map iframe {
+        height: 280px;
+    }
+
+    .reach-btn {
+        width: 100%;
     }
 
     .contact-form-wrapper {

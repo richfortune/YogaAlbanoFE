@@ -2186,3 +2186,19 @@ a.clickable-card:focus-visible {
         height: 100%;
     }
 }
+
+/* Layout Calendario su riga singola per Desktop grandi (>= 1200px) */
+@media (min-width: 1200px) {
+    .weekly-schedule-grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 0.75rem;
+    }
+    .weekly-schedule-grid .day-schedule-card {
+        padding: 1rem 0.5rem;
+    }
+    .weekly-schedule-grid .lesson-item h5 {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+}

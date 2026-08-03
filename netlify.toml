@@ -35,3 +35,10 @@
 #   to = "https://www.yogaalbano.it/:splat"
 #   status = 301
 #   force = true
+
+
+[[redirects]]
+  from = "/yoga-sulla-sedia.html"
+  to = "/ginnastica-yoga-dolce.html"
+  status = 301
+  force = true

@@ -646,7 +646,7 @@ a.clickable-card:focus-visible {
 
 .weekly-schedule-grid {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr)); /* 5 colonne su desktop */
+     /* 5 colonne su desktop */
     gap: 1rem;
     margin-bottom: 2.5rem;
 }
@@ -2139,5 +2139,50 @@ a.clickable-card:focus-visible {
 @media (max-width: 480px) {
     .course-hero__title {
         font-size: 2.5rem;
+    }
+}
+/* ========================================================================== */
+/* AGGIUNTE PER NUOVE RICHIESTE */
+/* ========================================================================== */
+
+/* CTA Mobile su card corso */
+.course-cta-mobile {
+    display: none;
+}
+
+/* Modifiche Griglia Orario */
+.weekly-schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+@media (max-width: 992px) {
+    .weekly-schedule-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .weekly-schedule-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .course-cta-mobile {
+        display: block;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--color-sage-light);
+        color: var(--color-sage-dark);
+        font-weight: 600;
+        text-align: right;
+        font-size: 0.95rem;
+    }
+    
+    .course-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
     }
 }

@@ -31,11 +31,26 @@
         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
-        <loc>https://www.yogaalbano.it/yoga-sulla-sedia.html</loc>
+        <loc>https://www.yogaalbano.it/ginnastica-yoga-dolce.html</loc>
         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
         <loc>https://www.yogaalbano.it/hatha-flow.html</loc>
         <lastmod>2026-07-28</lastmod>
     </url>
+  <url>
+    <loc>https://www.yogaalbano.it/power-pilates.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.yogaalbano.it/yoga-posturale.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.yogaalbano.it/yoga-dance-flow.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
 </urlset>
